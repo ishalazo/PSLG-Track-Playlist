@@ -2,7 +2,7 @@ public class Track {
     private String title;
     private String artist;
     private int year;
-    private int duration;
+    private int duration; //in seconds
 
     public Track(String title, String artist){
         this.title = title;
@@ -19,7 +19,9 @@ public class Track {
     //Format the Track information into
     // Title - Artist, Year [mm:ss]
     public String toString(){
-    	
+    	int mins = duration/60;
+    	int secs = duration%60;
+    	return title + " - " + artist+ ", "+ year + "["+ String.format("%02d", mins) + ":" + String.format("%02d", secs) + "]";
     }
 
     public boolean equals(Track other){
