@@ -1,4 +1,4 @@
-public class Track { 
+public class Track {
     private String title;
     private String artist;
     private int year;
@@ -13,15 +13,15 @@ public class Track {
         this.title = title;
         this.artist = artist;
         this.year = year;
-        this.duration = duration; 
+        this.duration = duration;
     }
 
     //Format the Track information into
     // Title - Artist, Year [mm:ss]
     public String toString(){
-    	int mins = duration/60;
-    	int secs = duration%60;
-    	return title + " - " + artist+ ", "+ year + "["+ String.format("%02d", mins) + ":" + String.format("%02d", secs) + "]";
+        int mins = duration/60;
+        int secs = duration%60;
+        return title + " - " + artist+ ", "+ year + "["+ String.format("%02d", mins) + ":" + String.format("%02d", secs) + "]";
     }
 
     public boolean equals(Track other){
